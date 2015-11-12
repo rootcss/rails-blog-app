@@ -1,0 +1,22 @@
+<!--This section prints the article-->
+<p>
+	<strong>Title:</strong>
+	<%= @article.title %>
+</p>
+<p>
+	<strong>Text:</strong>
+	<%= @article.text %>
+</p>
+
+<br />
+<%= link_to 'Back', articles_path %> | <%= link_to 'Edit', edit_article_path(@article) %>
+<hr>
+
+<!-- Print all the comments for this article-->
+<h2>Comments:</h2>
+<%= render @article.comments %>
+
+<!--Section to add comments on an article-->
+<hr>
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
